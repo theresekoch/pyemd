@@ -6,6 +6,8 @@ setup(install_requires=['numpy'],
 from setuptools import dist
 dist.Distribution().fetch_build_eggs(['Cython>=0.15.1', 'numpy>=1.10'])
 
+import numpy as np
+
 c_emd = Extension(
     'c_emd',
     sources=['c_emd/pyemd.c',
