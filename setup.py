@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages, Extension
 setup(install_requires=['numpy'], 
      packages = find_packages(include=['emd']))
 
-from distutils.core import setup, Extension
-import numpy as np
+from setuptools import dist
+dist.Distribution().fetch_build_eggs(['Cython>=0.15.1', 'numpy>=1.10'])
 
 c_emd = Extension(
     'c_emd',
