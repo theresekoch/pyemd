@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from setuptools import setup
-setup(install_requires=['numpy'])
+setup(install_requires=['numpy'], 
+     include - ['emd'])
 
 from distutils.core import setup, Extension
 import numpy as np
